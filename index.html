@@ -74,6 +74,37 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-docker开启jmx监控头" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/06/12/docker%E5%BC%80%E5%90%AFjmx%E7%9B%91%E6%8E%A7%E5%A4%B4/" class="article-date">
+  <time class="dt-published" datetime="2021-06-12T10:18:29.057Z" itemprop="datePublished">2021-06-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Docker中的java程序开启JMX监控"><a href="#Docker中的java程序开启JMX监控" class="headerlink" title="Docker中的java程序开启JMX监控"></a>Docker中的java程序开启JMX监控</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">--name spring-app \</span><br><span class="line">-e &quot;JAVA_OPTIONS=</span><br><span class="line">        -Dcom.sun.management.jmxremote.port=1090 </span><br><span class="line">		-Dcom.sun.management.jmxremote.rmi.port=1090   </span><br><span class="line">		-Dcom.sun.management.jmxremote.ssl=false </span><br><span class="line">		-Dcom.sun.management.jmxremote.authenticate=false  </span><br><span class="line">		-Djava.rmi.server.hostname=172.16.18.16</span><br><span class="line">	&quot;</span><br><span class="line">--net dadi-bridge \</span><br><span class="line">--init \</span><br><span class="line">--restart=always spring-app</span><br></pre></td></tr></table></figure>
+
+<p>查看其中的JAVA_OPTIONS参数即可</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://shadon178.github.io/2021/06/12/docker%E5%BC%80%E5%90%AFjmx%E7%9B%91%E6%8E%A7%E5%A4%B4/" data-id="ckptmgo3v0000xwvuhbjx54xm" data-title="" class="article-share-link">Teilen</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/06/06/hello-world/" class="article-date">
@@ -113,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://shadon178.github.io/2021/06/06/hello-world/" data-id="ckpl1k1vn0000x0vug7cuayqs" data-title="Hello World" class="article-share-link">Teilen</a>
+      <a data-url="https://shadon178.github.io/2021/06/06/hello-world/" data-id="ckptmgo420001xwvu8r4ag5hw" data-title="Hello World" class="article-share-link">Teilen</a>
       
       
       
@@ -154,6 +185,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/06/12/docker%E5%BC%80%E5%90%AFjmx%E7%9B%91%E6%8E%A7%E5%A4%B4/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2021/06/06/hello-world/">Hello World</a>
